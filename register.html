@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="appointment.html">Book Appointment</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h2>Register</h2>
+
+    <form onsubmit="return validateRegistrationForm()">
+        <label>Full Name:</label>
+        <input type="text" id="fullName" required>
+      
+        <label>Mobile Number:</label>
+        <input type="tel" id="mobile" pattern="\d{10}" required>
+      
+        <label>ID Proof:</label>
+        <input type="file" id="idProof" required>
+      
+        <label>Address:</label>
+        <textarea id="address" required></textarea>
+      
+        <label>User ID:</label>
+        <input type="text" id="userId" required>
+      
+        <label>Password:</label>
+        <input type="password" id="password" pattern=".{8,}" required>
+      
+        <button type="submit">Register</button>
+      </form>
+      <script src="js/script.js"></script>
+
+      
+  </section>
+
+</body>
+</html>

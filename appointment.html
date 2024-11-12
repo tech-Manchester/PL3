@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h2>Book an Appointment</h2>
+
+    <form onsubmit="return validateAppointmentForm()">
+        <label>Date of Visit:</label>
+        <input type="date" id="visitDate" required>
+      
+        <label>Time of Visit:</label>
+        <input type="time" id="visitTime" required>
+      
+        <label>Purpose of Visit:</label>
+        <textarea id="purpose" required></textarea>
+      
+        <label>Select Doctor:</label>
+        <select id="doctorSelect" required>
+          <option value="">Select Doctor</option>
+          <option value="dr-john">Dr. John</option>
+          <option value="dr-jane">Dr. Smith</option>
+        </select>
+      
+        <button type="submit">Book Appointment</button>
+      </form>
+      <script src="js/script.js"></script>
+  </section>
+ 
+  
+
+</body>
+</html>

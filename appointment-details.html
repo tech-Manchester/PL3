@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Appointment Details</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 2em;
+    background: #e0f7fa;
+  }
+  .msg-box{
+    text-align: center;
+    padding: 2em;
+    background: #e0f7fa;
+  }
+  
+  .hero h1 {
+    color: #333;
+  }
+  
+  .cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .services {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background: #f2f2f2;
+    padding: 1em;
+    border-radius: 8px;
+    width: 150px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .form-section {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+  }
+  
+  input, textarea, select, button {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+  }
+  
+  button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+
+  .appointment-details {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .appointment-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+  
+  .appointment-card h3 {
+    color: #007bff;
+  }
+  
+  .appointment-card p {
+    margin: 5px 0;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .service-cards {
+      flex-direction: column;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="appointment.html">Book Appointment</a></li>
+      <li><a href="appointment-details.html">Your Appointments</a></li>
+    </ul>
+  </nav>
+
+  <section class="appointment-details">
+    <h2>Your Appointment Details</h2>
+    <div id="appointmentContainer">
+      <!-- Appointment details will be populated here -->
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Sample appointment data for demonstration purposes
+    const appointmentData = [
+      {
+        doctor: "Dr. John Doe",
+        date: "2024-11-15",
+        time: "10:30 AM",
+        purpose: "General Checkup",
+        status: "Confirmed"
+      },
+      {
+        doctor: "Dr. Jane Smith",
+        date: "2024-11-18",
+        time: "02:00 PM",
+        purpose: "Follow-up Consultation",
+        status: "Pending"
+      }
+    ];
+
+    // Function to display appointment details
+    function displayAppointments() {
+      const container = document.getElementById("appointmentContainer");
+
+      if (appointmentData.length === 0) {
+        container.innerHTML = "<p>No appointments found.</p>";
+        return;
+      }
+
+      appointmentData.forEach(appointment => {
+        const appointmentDiv = document.createElement("div");
+        appointmentDiv.classList.add("appointment-card");
+
+        appointmentDiv.innerHTML = `
+          <h3>${appointment.doctor}</h3>
+          <p><strong>Date:</strong> ${appointment.date}</p>
+          <p><strong>Time:</strong> ${appointment.time}</p>
+          <p><strong>Purpose:</strong> ${appointment.purpose}</p>
+          <p><strong>Status:</strong> ${appointment.status}</p>
+        `;
+        
+        container.appendChild(appointmentDiv);
+      });
+    }
+
+    // Load appointments on page load
+    window.onload = displayAppointments;
+  </script>
+</body>
+</html>

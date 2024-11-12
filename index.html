@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Appointment - Homepage</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+      <a href="appointment.html">Book Appointment</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Online Doctor Appointment System</h1>
+      <p>Your health, our priority. Book your appointment easily online.</p>
+      <a href="appointment.html" class="cta-button">Book an Appointment</a>
+    </div>
+  </section>
+
+  <!-- Message Section -->
+  <div class="msg-box">
+    <h3>Message from our Chairman!</h3>
+    <p>"Back in the day, we realised that just as innovation in medical science is elementary to the growth of healthcare, we need to bring innovation in how we take quality healthcare to everyone.</p>
+    <p>We realised that it is not merely a transaction of health services between a patient and doctor. It is trust that fosters a healthy relationship in the journey of health.</p>
+    <p>As we move with the times, we realise that technology has a huge role in making our services way more efficient. And by its application, way more human as well.</p>
+    <p>We have a dream. Our dream is to be available to you round the clock, wherever you are and whenever you want. We want to be just one tap away from you, and this will be the beginning of consumer-centric healthcare."</p>
+  </div>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Specializations</h2>
+    <div class="service-cards">
+      <div class="service-card">Cardiology</div>
+      <div class="service-card">Dermatology</div>
+      <div class="service-card">Pediatrics</div>
+      <div class="service-card">Orthopedics</div>
+      <div class="service-card">Neurology</div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="doctors">
+    <h2>Meet Our Doctors</h2>
+    <div class="doctor-cards">
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/150" alt="Doctor 1">
+        <p>Dr. John Doe</p>
+        <p>Cardiologist</p>
+      </div>
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/150" alt="Doctor 2">
+        <p>Dr. Jane Smith</p>
+        <p>Dermatologist</p>
+      </div>
+      <div class="doctor-card">
+        <img src="https://via.placeholder.com/150" alt="Doctor 3">
+        <p>Dr. Robert Brown</p>
+        <p>Pediatrician</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Doctor Appointment System</p>
+  </footer>
+
+  <script>
+    // Smooth Scroll for Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
